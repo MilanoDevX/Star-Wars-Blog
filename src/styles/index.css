@@ -1,3 +1,21 @@
 /* 
     General Styles
 */
+
+body {
+  background-color: black;
+}
+
+#scroll::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+  
+#scroll::-webkit-scrollbar-track {
+  background: black;        /* color of the tracking area */
+}
+  
+#scroll::-webkit-scrollbar-thumb {
+  background-color: lightgrey;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid black;  /* creates padding around scroll thumb */
+}
