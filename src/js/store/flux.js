@@ -40,10 +40,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
 
-				// obtaining characters
-				getCharacters
+			// obtaining characters
+			getCharacters: async () => {
+				const apiUrl = "https://www.swapi.tech/api/people"
+				const resp = await fetch(apiUrl)
+				const data = await resp.json()
+				setStore({characters: data.results})
+			},
+
+			// obtaining planets
+			getPlanets: async () => {
+				const apiUrl = "https://www.swapi.tech/api/planets"
+				const resp = await fetch(apiUrl)
+				const data = await resp.json()
+				setStore({planets: data.results})
+			},
+
+			// obtaining vehicles
+			getVehicles: async () => {
+				const apiUrl = "https://www.swapi.tech/api/vehicles"
+				const resp = await fetch(apiUrl)
+				const data = await resp.json()
+				setStore({vehicles: data.results})
 			}
+
 		}
 	};
 };
