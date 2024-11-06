@@ -1,17 +1,10 @@
 
 import React from "react";
-import { charactersUrl } from "../utils";
 
-const Card = (props) => {
-    const imageUrl = charactersUrl; // ---> cambiar a string vacío
-    //if (???? == character) {
-    //  imageUrl = charactersUrl
-    //}
-    // Repetir para planetas y vehículos
-
+const CardCharacters = (props) => {
     return (
             <div className="card p-0 border-dark rounded" style={{width: "15rem"}}>
-                <img src={imageUrl + props.uid + ".jpg"} 
+                <img src={"https://starwars-visualguide.com/assets/img/characters/" + props.uid + ".jpg"} 
                     className="card-img-top" alt={props.name} 
                 />
                 <div className="card-body">
@@ -26,7 +19,7 @@ const Card = (props) => {
     )
 }
 
-export default Card;
+export default CardCharacters;
 
 
 

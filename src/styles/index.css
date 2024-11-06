@@ -4,6 +4,7 @@
 
 body {
   background-color: black;
+  padding: 15px;
 }
 
 #scroll::-webkit-scrollbar {
