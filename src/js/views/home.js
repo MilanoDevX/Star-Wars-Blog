@@ -17,7 +17,7 @@ export const Home = () => {
 
 	return (
 		<div className="text-center mt-3">
-			<h1 className="text-warning">Star Wars</h1>
+			<h1 className="text-warning" style={{fontFamily: "Star Wars"}}>Star Wars</h1>
 
 			<div className="container-fluid d-flex mb-2" >
 					<h2 className="text-secondary">Characters  <i className="fa-solid fa-jedi"/></h2>

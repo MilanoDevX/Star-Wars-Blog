@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+		<nav className="navbar bg-black mb-3 mx-0 px-5">
+			<Link to="/" style={{textDecoration: "none"}}>
+				<div className="justify-content-center text-warning">
+					<div className="m-0 p-0 h4" style={{fontFamily: "Star Wars"}}>Star</div>
+					<div className="m-0 p-0 h4" style={{fontFamily: "Star Wars"}}>Wars</div>
+				</div>
 			</Link>
 			<div className="ml-auto">
 				<Link to="/demo">
