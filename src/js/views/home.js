@@ -4,10 +4,15 @@ import CardCharacters from "../component/cardCharacters";
 import CardPlanets from "../component/cardPlanets";
 import CardVehicles from "../component/cardVehicles";
 import { Context } from "../store/appContext"
+import { Hero } from "../component/hero";
 
 export const Home = () => {
 	
 	const {store, actions} = useContext(Context);
+
+	const charactersDetails = [];
+
+
 
 	useEffect(() => {
 		actions.getCharacters()
@@ -17,7 +22,10 @@ export const Home = () => {
 
 	return (
 		<div className="text-center mt-3">
-			<h1 className="text-warning" style={{fontFamily: "Star Wars"}}>Star Wars</h1>
+			<Hero></Hero>
+
+
+			<h1 id="databank" className="text-warning" style={{fontFamily: "Star Wars"}}>Star Wars Databank</h1>
 
 			<div className="container-fluid d-flex mb-2" >
 					<h2 className="text-secondary">Characters  <i className="fa-solid fa-jedi"/></h2>

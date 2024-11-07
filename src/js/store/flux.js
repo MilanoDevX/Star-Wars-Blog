@@ -15,7 +15,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			characters: [],
 			planets: [],
-			vehicles: []
+			vehicles: [],
+			favorites: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -64,8 +65,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const resp = await fetch(apiUrl)
 				const data = await resp.json()
 				setStore({vehicles: data.results})
-			}
+			},
 
+			// adding to favorites
+			addToFavorites: (item) => {
+				const store = getStore();
+
+				const searchItem = store.favorites.find( i => i.name == item.name )
+				if(!searchItem){
+					setStore({favorites: [ ...store.favorites, item ] })
+				}
+			}
 		}
 	};
 };
