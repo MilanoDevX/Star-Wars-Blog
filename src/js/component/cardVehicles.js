@@ -24,15 +24,16 @@ const CardVehicles = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{props.name}</h5>
                     <p className="card-text"></p>
-                    <div className="d-flex justify-content-between pb-0 mb-0">
-                        <div></div>
-                        <button type="button" className="btn btn-outline-warning"
-                            onClick={() => actions.addToFavorites({
-                                name: props.name})
-                            }                        
-                        ><i class="fa-regular fa-heart"/><i class="fa-solid fa-heart"/></button>
-                    </div>
                 </div>
+                <div className="card-footer d-flex justify-content-between mb-2">
+                    <div></div>
+                    <button type="button" className="btn btn-outline-warning"
+                        onClick={() => actions.addToFavorites({
+                            name: props.name})
+                        }                        
+                    ><i class="fa-regular fa-heart"/><i class="fa-solid fa-heart"/></button>
+                </div>
+
             </div>
     )
 }
