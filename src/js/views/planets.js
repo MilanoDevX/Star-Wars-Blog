@@ -10,6 +10,10 @@ export const Planets = () => {
     const { store, actions } = useContext(Context);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
+    useEffect(() => {
         actions.getPlanets()
     }, [])
 
@@ -18,7 +22,7 @@ export const Planets = () => {
             <h1 id="databank2" className="text-light py-5" >Star Wars Databank</h1>
 
             <div className="container-fluid d-flex mb-2" >
-                <h2 className="text-light"><i className="fa-solid fa-jedi" /> Planets</h2>
+                <h2 className="text-light"><i className="fa-solid fa-earth-asia" /> Planets</h2>
             </div>
             <div id="scroll" className="d-flex justify-content-center flex-wrap w-100 gap-5 mb-5">
                     {

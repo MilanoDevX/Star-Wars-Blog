@@ -10,6 +10,10 @@ export const Characters = () => {
     const { store, actions } = useContext(Context);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
+    useEffect(() => {
         actions.getCharacters()
     }, [])
 

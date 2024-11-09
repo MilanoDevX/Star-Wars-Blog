@@ -6,21 +6,9 @@ import CardVehicles from "../component/cardVehicles";
 import CardStarships from "../component/cardStarships";
 import { Context } from "../store/appContext"
 import { Hero } from "../component/hero";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, ScrollRestoration } from 'react-router-dom';
 
 export const Home = () => {
-
-	const { store, actions } = useContext(Context);
-
-	const charactersDetails = [];
-
-	useEffect(() => {
-		actions.getCharacters()
-		actions.getPlanets()
-		actions.getStarships()
-		actions.getVehicles()
-	}, [])
-
 
 	const { hash } = useLocation();
 
@@ -38,74 +26,30 @@ export const Home = () => {
 		<div className="text-center mt-3">
 			<Hero></Hero>
 
-			<h1 id="databank" className="text-light py-5" >Star Wars Databank</h1>
+			<h1 id="databank" className="text-light pt-5 pb-0" >Star Wars Databank</h1>
 
-			<div className="container-fluid d-flex mb-2" >
+			<div className="container d-flex justify-content-center mb-1 gap-5" >
 				<Link to={{pathname:"/characters", hash: "#databank1"}} style={{ textDecoration: "none" }}>
-					<h2 className="text-light"><i className="fa-solid fa-jedi" /> Characters</h2>
+					<h4 className="text-light">Characters</h4>
 				</Link>
-			</div>
-			<div id="scroll" className="container-fluid overflow-scroll mb-5">
-				<div className="row flex-row flex-nowrap mx-0 mb-4 gap-3">
-					{
-						store.characters.map((item, index) => {
-							return (
-								<CardCharacters key={index} name={item.name} uid={item.uid}></CardCharacters>
-							)
-						})
-					}
-				</div>
-			</div>
 
-			<div className="container-fluid d-flex mb-2 pt-2" >
 				<Link to={{pathname:"/planets", hash: "#databank2"}} style={{ textDecoration: "none" }}>
-					<h2 className="text-light"><i className="fa-solid fa-earth-asia" /> Planets</h2>
+					<h4 className="text-light">Planets</h4>
 				</Link>
-			</div>
-			<div id="scroll" className="container-fluid overflow-scroll mb-5">
-				<div className="row flex-row flex-nowrap mx-0 mb-4 gap-3">
-					{
-						store.planets.map((item, index) => {
-							return (
-								<CardPlanets key={index} name={item.name} uid={item.uid}></CardPlanets>
-							)
-						})
-					}
-				</div>
-			</div>
 
-			<div className="container-fluid d-flex mb-2 pt-2">
 				<Link to={{pathname:"/starships", hash: "#databank3"}} style={{ textDecoration: "none" }}>
-					<h2 className="text-light"><i className="fa-solid fa-jet-fighter-up" /> Starships</h2>
+					<h4 className="text-light">Starships</h4>
 				</Link>
-			</div>
-			<div id="scroll" className="container-fluid overflow-scroll mb-5">
-				<div className="row d-flex flex-row flex-nowrap mx-0 mb-4 gap-3">
-					{
-						store.starships.map((item, index) => {
-							return (
-								<CardStarships key={index} name={item.name} uid={item.uid}></CardStarships>
-							)
-						})
-					}
-				</div>
+
+				<Link to={{pathname:"/vehicles", hash: "#databank4"}} style={{ textDecoration: "none" }}>
+					<h4 className="text-light">Vehicles</h4>
+				</Link>
 			</div>
 
-			<div className="container-fluid d-flex mb-2 pt-2">
-				<Link to={{pathname:"/vehicles", hash: "#databank4"}} style={{ textDecoration: "none" }}>
-					<h2 className="text-light"><i className="fa-solid fa-jet-fighter-up" /> Vehicles</h2>
-				</Link>
-			</div>
-			<div id="scroll" className="container-fluid overflow-scroll mb-5">
-				<div className="row d-flex flex-row flex-nowrap mx-0 mb-4 gap-3">
-					{
-						store.vehicles.map((item, index) => {
-							return (
-								<CardVehicles key={index} name={item.name} uid={item.uid}></CardVehicles>
-							)
-						})
-					}
-				</div>
+			<div className="d-flex justify-content-center">
+				<img src="https://raw.githubusercontent.com/4GeeksAcademy/EliasMilano-Star-Wars-Blog/refs/heads/master/src/img/Episode-3.jpg" 
+					style={{width:"70%"}}
+				/>
 			</div>
 
 		</div>
