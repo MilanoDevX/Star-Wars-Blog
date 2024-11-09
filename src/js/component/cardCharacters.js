@@ -35,8 +35,8 @@ const CardCharacters = (props) => {
                                     store.favorites.find(i => i.name == props.name) 
                                     ? "fa-solid fa-heart" 
                                     : "fa-regular fa-heart"
-                                    }/>
-                            </button>
+                                }/>
+                        </button>
                     </div>
                 </div>
             </div>

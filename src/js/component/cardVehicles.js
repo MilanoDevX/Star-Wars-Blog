@@ -30,8 +30,13 @@ const CardVehicles = (props) => {
                     <button type="button" className="btn btn-outline-warning"
                         onClick={() => actions.addToFavorites({
                             name: props.name})
-                        }                        
-                    ><i className="fa-regular fa-heart"/><i className="fa-solid fa-heart"/></button>
+                        }>
+                            <i className={
+                                store.favorites.find(i => i.name == props.name) 
+                                ? "fa-solid fa-heart" 
+                                : "fa-regular fa-heart"
+                            }/>
+                    </button>
                 </div>
 
             </div>
