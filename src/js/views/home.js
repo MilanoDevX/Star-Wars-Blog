@@ -3,6 +3,7 @@ import "../../styles/home.css";
 import CardCharacters from "../component/cardCharacters";
 import CardPlanets from "../component/cardPlanets";
 import CardVehicles from "../component/cardVehicles";
+import CardStarships from "../component/cardStarships";
 import { Context } from "../store/appContext"
 import { Hero } from "../component/hero";
 import { useLocation } from 'react-router-dom';
@@ -16,6 +17,7 @@ export const Home = () => {
 	useEffect(() => {
 		actions.getCharacters()
 		actions.getPlanets()
+		actions.getStarships()
 		actions.getVehicles()
 	}, [])
 
@@ -36,13 +38,13 @@ export const Home = () => {
 		<div className="text-center mt-3">
 			<Hero></Hero>
 
-			<h1 id="databank" className="text-light pt-5" >Star Wars Databank</h1>
+			<h1 id="databank" className="text-light py-5" >Star Wars Databank</h1>
 
 			<div className="container-fluid d-flex mb-2" >
 				<h2 className="text-light"><i className="fa-solid fa-jedi" /> Characters</h2>
 			</div>
 			<div id="scroll" className="container-fluid overflow-scroll mb-5">
-				<div className="row flex-row flex-nowrap mx-0 mb-2 gap-3">
+				<div className="row flex-row flex-nowrap mx-0 mb-4 gap-3">
 					{
 						store.characters.map((item, index) => {
 							return (
@@ -53,11 +55,11 @@ export const Home = () => {
 				</div>
 			</div>
 
-			<div className="container-fluid d-flex mb-2" >
+			<div className="container-fluid d-flex mb-2 pt-2" >
 				<h2 className="text-light"><i className="fa-solid fa-earth-asia" /> Planets</h2>
 			</div>
 			<div id="scroll" className="container-fluid overflow-scroll mb-5">
-				<div className="row flex-row flex-nowrap mx-0 mb-2 gap-3">
+				<div className="row flex-row flex-nowrap mx-0 mb-4 gap-3">
 					{
 						store.planets.map((item, index) => {
 							return (
@@ -68,11 +70,26 @@ export const Home = () => {
 				</div>
 			</div>
 
-			<div className="container-fluid d-flex mb-2" >
+			<div className="container-fluid d-flex mb-2 pt-2">
+				<h2 className="text-light"><i className="fa-solid fa-jet-fighter-up" /> Starships</h2>
+			</div>
+			<div id="scroll" className="container-fluid overflow-scroll mb-5">
+				<div className="row d-flex flex-row flex-nowrap mx-0 mb-4 gap-3">
+					{
+						store.starships.map((item, index) => {
+							return (
+								<CardStarships key={index} name={item.name} uid={item.uid}></CardStarships>
+							)
+						})
+					}
+				</div>
+			</div>
+
+			<div className="container-fluid d-flex mb-2 pt-2">
 				<h2 className="text-light"><i className="fa-solid fa-jet-fighter-up" /> Vehicles</h2>
 			</div>
 			<div id="scroll" className="container-fluid overflow-scroll mb-5">
-				<div className="row d-flex flex-row flex-nowrap mx-0 mb-2 gap-3">
+				<div className="row d-flex flex-row flex-nowrap mx-0 mb-4 gap-3">
 					{
 						store.vehicles.map((item, index) => {
 							return (
