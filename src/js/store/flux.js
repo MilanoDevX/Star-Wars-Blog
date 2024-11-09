@@ -13,6 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
+			films: [],
 			characters: [],
 			planets: [],
 			starships: [],
@@ -42,6 +43,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+
+			// obtaining films
+			getFilms: async () => {
+				const apiUrl = "https://www.swapi.tech/api/films/"
+				const resp = await fetch(apiUrl)
+				const data = await resp.json()
+				setStore({films: data.result})
 			},
 
 			// obtaining characters

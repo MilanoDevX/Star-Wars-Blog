@@ -31,7 +31,7 @@ const CardVehicles = (props) => {
                         onClick={() => actions.addToFavorites({
                             name: props.name})
                         }                        
-                    ><i class="fa-regular fa-heart"/><i class="fa-solid fa-heart"/></button>
+                    ><i className="fa-regular fa-heart"/><i className="fa-solid fa-heart"/></button>
                 </div>
 
             </div>

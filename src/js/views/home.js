@@ -29,19 +29,23 @@ export const Home = () => {
 			<h1 id="databank" className="text-light pt-5 pb-0" >Star Wars Databank</h1>
 
 			<div className="container d-flex justify-content-center mb-1 gap-5" >
-				<Link to={{pathname:"/characters", hash: "#databank1"}} style={{ textDecoration: "none" }}>
+				<Link to={{pathname:"/films"}} style={{ textDecoration: "none" }}>
+					<h4 className="text-light">Films</h4>
+				</Link>
+
+				<Link to={{pathname:"/characters"}} style={{ textDecoration: "none" }}>
 					<h4 className="text-light">Characters</h4>
 				</Link>
 
-				<Link to={{pathname:"/planets", hash: "#databank2"}} style={{ textDecoration: "none" }}>
+				<Link to={{pathname:"/planets"}} style={{ textDecoration: "none" }}>
 					<h4 className="text-light">Planets</h4>
 				</Link>
 
-				<Link to={{pathname:"/starships", hash: "#databank3"}} style={{ textDecoration: "none" }}>
+				<Link to={{pathname:"/starships"}} style={{ textDecoration: "none" }}>
 					<h4 className="text-light">Starships</h4>
 				</Link>
 
-				<Link to={{pathname:"/vehicles", hash: "#databank4"}} style={{ textDecoration: "none" }}>
+				<Link to={{pathname:"/vehicles"}} style={{ textDecoration: "none" }}>
 					<h4 className="text-light">Vehicles</h4>
 				</Link>
 			</div>
