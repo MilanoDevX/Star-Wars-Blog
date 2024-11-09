@@ -8,7 +8,7 @@ export const Navbar = () => {
 
 	return (
 		<nav className="navbar bg-black m-0 px-5 py-2 fixed-top">
-			<Link to="/" style={{ textDecoration: "none" }}>
+			<Link to={{pathname:"/", hash: "#hero"}} style={{ textDecoration: "none" }}>
 				<div className="justify-content-center text-warning">
 					<img src="https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png" style={{ maxWidth: "100px" }} />
 				</div>
