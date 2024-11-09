@@ -6,7 +6,7 @@ import CardVehicles from "../component/cardVehicles";
 import CardStarships from "../component/cardStarships";
 import { Context } from "../store/appContext"
 import { Hero } from "../component/hero";
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Home = () => {
 
@@ -41,7 +41,9 @@ export const Home = () => {
 			<h1 id="databank" className="text-light py-5" >Star Wars Databank</h1>
 
 			<div className="container-fluid d-flex mb-2" >
-				<h2 className="text-light"><i className="fa-solid fa-jedi" /> Characters</h2>
+				<Link to={{pathname:"/characters", hash: "#databank1"}} style={{ textDecoration: "none" }}>
+					<h2 className="text-light"><i className="fa-solid fa-jedi" /> Characters</h2>
+				</Link>
 			</div>
 			<div id="scroll" className="container-fluid overflow-scroll mb-5">
 				<div className="row flex-row flex-nowrap mx-0 mb-4 gap-3">
@@ -56,7 +58,9 @@ export const Home = () => {
 			</div>
 
 			<div className="container-fluid d-flex mb-2 pt-2" >
-				<h2 className="text-light"><i className="fa-solid fa-earth-asia" /> Planets</h2>
+				<Link to={{pathname:"/planets", hash: "#databank2"}} style={{ textDecoration: "none" }}>
+					<h2 className="text-light"><i className="fa-solid fa-earth-asia" /> Planets</h2>
+				</Link>
 			</div>
 			<div id="scroll" className="container-fluid overflow-scroll mb-5">
 				<div className="row flex-row flex-nowrap mx-0 mb-4 gap-3">
@@ -71,7 +75,9 @@ export const Home = () => {
 			</div>
 
 			<div className="container-fluid d-flex mb-2 pt-2">
-				<h2 className="text-light"><i className="fa-solid fa-jet-fighter-up" /> Starships</h2>
+				<Link to={{pathname:"/starships", hash: "#databank3"}} style={{ textDecoration: "none" }}>
+					<h2 className="text-light"><i className="fa-solid fa-jet-fighter-up" /> Starships</h2>
+				</Link>
 			</div>
 			<div id="scroll" className="container-fluid overflow-scroll mb-5">
 				<div className="row d-flex flex-row flex-nowrap mx-0 mb-4 gap-3">
@@ -86,7 +92,9 @@ export const Home = () => {
 			</div>
 
 			<div className="container-fluid d-flex mb-2 pt-2">
-				<h2 className="text-light"><i className="fa-solid fa-jet-fighter-up" /> Vehicles</h2>
+				<Link to={{pathname:"/vehicles", hash: "#databank4"}} style={{ textDecoration: "none" }}>
+					<h2 className="text-light"><i className="fa-solid fa-jet-fighter-up" /> Vehicles</h2>
+				</Link>
 			</div>
 			<div id="scroll" className="container-fluid overflow-scroll mb-5">
 				<div className="row d-flex flex-row flex-nowrap mx-0 mb-4 gap-3">
