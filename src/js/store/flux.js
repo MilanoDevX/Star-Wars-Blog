@@ -89,11 +89,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 			addToFavorites: (item) => {
 				const store = getStore();
 
-				const searchItem = store.favorites.find( i => i.name == item.name )
+				const searchItem = store.favorites.find( fav => fav.name == item.name )
 				if(!searchItem){
 					setStore({favorites: [ ...store.favorites, item ] })
 				}
-			}
+			},
+
+			// Acción para eliminar un favorito por nombre
+            removeFavorite: (item) => {
+                const store = getStore();
+                const updatedFavorites = store.favorites.filter( fav => fav.name !== item );
+                setStore({favorites: updatedFavorites});
+            }
 		}
 	};
 };

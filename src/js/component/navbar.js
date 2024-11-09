@@ -27,7 +27,10 @@ export const Navbar = () => {
 							store.favorites.map((item, index) => <li className="px-3" key={index}>
 								<div className="d-flex justify-content-between align-items-center">
 									<a className="droppdown-item text-black" href="#" style={{ textDecoration: "none" }}>{item.name}</a> 
-									<i className="fa-solid fa-x"></i>
+									<i className="fa-solid fa-x"
+										style={{ cursor: "pointer" }}
+										onClick={() => actions.removeFavorite(item.name)}
+									></i>
 								</div>
 							</li>)
 						}
