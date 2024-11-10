@@ -45,7 +45,7 @@ export const PlanetDetails = () => {
                     className="btn btn-outline-light mb-0" style={{border:"none"}}
                     onClick={() => navigate(-1)} // back to the previous page
                 >
-                    <i class="fa-solid fa-arrow-left fa-2xl"></i>
+                    <i className="fa-solid fa-arrow-left fa-2xl"></i>
                 </button>
             </div>
 

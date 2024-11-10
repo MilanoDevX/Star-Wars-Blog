@@ -24,7 +24,7 @@ export const StarshipDetails = () => {
                 });
             }
         } catch (error) {
-            console.error("Error fetching vehicle data:", error);
+            console.error("Error fetching starship data:", error);
         }
     };
 
