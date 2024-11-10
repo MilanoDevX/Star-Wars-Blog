@@ -95,7 +95,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-			// Acción para eliminar un favorito por nombre
+			// deleting favorites
             removeFavorite: (item) => {
                 const store = getStore();
                 const updatedFavorites = store.favorites.filter( fav => fav.name !== item );
