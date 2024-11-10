@@ -3,39 +3,38 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/demo.css";
 
-export const CharacterDetails = () => {
+export const PlanetDetails = () => {
     const { store, actions } = useContext(Context);
-    const { characterId } = useParams();
-    const [character, setCharacter] = useState(null);
+    const { planetId } = useParams();
+    const [planet, setPlanet] = useState(null);
     const navigate = useNavigate(); 
 
-    // Loading character details
-    const loadCharacterDetails = async () => {
+    // Loading planet details
+    const loadPlanetDetails = async () => {
         try {
-            const response = await fetch(`https://www.swapi.tech/api/people/${characterId}`);
+            const response = await fetch(`https://www.swapi.tech/api/planets/${planetId}`);
             const data = await response.json();
 
             if (data && data.result) {
-                // Loading birth planet
-                const homeworldResponse = await fetch(data.result.properties.homeworld);
-                const homeworldData = await homeworldResponse.json();
-                setCharacter({
+                setPlanet({
                     ...data.result,
                     properties: {
                         ...data.result.properties,
-                        homeworldName: homeworldData.result.properties.name,
                     },
                 });
             }
         } catch (error) {
-            console.error("Error fetching character data:", error);
+            console.error("Error fetching planet data:", error);
         }
     };
 
+    const url = (planetId) == 1 ? ("https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png") : ("https://starwars-visualguide.com/assets/img/planets/" + planetId + ".jpg")
+
+
     useEffect(() => {
         window.scrollTo(0, 0);
-        loadCharacterDetails();
-    }, [characterId]);
+        loadPlanetDetails();
+    }, [planetId]); 
 
     return (
         <div className="text-center bg-black mt-2">
@@ -50,30 +49,31 @@ export const CharacterDetails = () => {
                 </button>
             </div>
 
-            {character ? (
+            {planet ? (
                 <div className="container-fluid d-flex flex-column align-items-center mb-0">
                     <div className="card container my-2 bg-black" style={{ width: "600px" }}>
                         <div className="row d-flex justify-content-between">
                             <div className="col-md-7 px-0">
                                 <img
-                                    src={`https://starwars-visualguide.com/assets/img/characters/${characterId}.jpg`}
+                                    src={url}
                                     className="card-img-top"
-                                    alt={character.properties.name}
+                                    alt={planet.properties.name}
                                     style={{ width: "100%" }}
                                 />
                             </div>
                             <div className="col-md-5">
                                 <div className="card-body mb-5">
                                     <div className="py-2">
-                                        <h3 className="card-title text-light">{character.properties.name}</h3>
+                                        <h3 className="card-title text-light">{planet.properties.name}</h3>
                                     </div>
-                                    <p className="text-light">Gender: {character.properties.gender}</p>
-                                    <p className="text-light">Birth year: {character.properties.birth_year}</p>
-                                    <p className="text-light">Homeworld: {character.properties.homeworldName}</p>
-                                    <p className="text-light">Height: {character.properties.height}</p>
-                                    <p className="text-light">Hair color: {character.properties.hair_color}</p>
-                                    <p className="text-light">Skin color: {character.properties.skin_color}</p>
-                                    <p className="text-light">Eye color: {character.properties.eye_color}</p>
+                                    <p className="text-light">Population: {planet.properties.population}</p>
+                                    <p className="text-light">Diameter: {planet.properties.diameter}</p>
+                                    <p className="text-light">Rotation period: {planet.properties.rotation_period}</p>
+                                    <p className="text-light">Orbital period: {planet.properties.orbital_period}</p>
+                                    <p className="text-light">Gravity: {planet.properties.gravity}</p>
+                                    <p className="text-light">Climate: {planet.properties.climate}</p>
+                                    <p className="text-light">Terrain: {planet.properties.terrain}</p>
+                                    <p className="text-light">Surface water: {planet.properties.surface_water}</p>
                                     <div className="d-flex justify-content-between">
                                         <div className="container d-flex justify-content-between mt-4 mb-0">
                                             <div></div>
@@ -82,15 +82,13 @@ export const CharacterDetails = () => {
                                                 className="btn btn-outline-warning"
                                                 onClick={() =>
                                                     actions.addToFavorites({
-                                                        name: character.properties.name,
+                                                        name: planet.properties.name,
                                                     })
                                                 }
                                             >
                                                 <i
                                                     className={
-                                                        store.favorites.find(
-                                                            (i) => i.name === character.properties.name
-                                                        )
+                                                        store.favorites.find((i) => i.name === planet.properties.name)
                                                             ? "fa-solid fa-heart"
                                                             : "fa-regular fa-heart"
                                                     }
@@ -104,7 +102,7 @@ export const CharacterDetails = () => {
                     </div>
                 </div>
             ) : (
-                <h2 className="text-light">Loading character...</h2>
+                <h2 className="text-light">Loading planet...</h2>
             )}
         </div>
     );
