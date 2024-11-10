@@ -16,6 +16,7 @@ import { Starships } from "./views/starships";
 import { Vehicles } from "./views/vehicles";
 import { CharacterDetails } from "./views/characterDetails";
 import { PlanetDetails } from "./views/planetDetails";
+import { VehicleDetails } from "./views/vehicleDetails";
 
 //create your first component
 const Layout = () => {
@@ -38,6 +39,7 @@ const Layout = () => {
 						<Route path="/planets/:planetId" element={<PlanetDetails />} />
 						<Route path="/starships" element={<Starships />} />
 						<Route path="/vehicles" element={<Vehicles />} />
+						<Route path="/vehicles/:vehicleId" element={<VehicleDetails />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
