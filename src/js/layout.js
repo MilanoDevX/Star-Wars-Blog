@@ -19,6 +19,7 @@ import { PlanetDetails } from "./views/planetDetails";
 import { VehicleDetails } from "./views/vehicleDetails";
 import { StarshipDetails } from "./views/starshipDetails";
 import { FilmDetails } from "./views/filmDetails";
+import { PageNotFound } from "./views/pageNotFound";
 
 //create your first component
 const Layout = () => {
@@ -45,7 +46,7 @@ const Layout = () => {
 						<Route path="/vehicles" element={<Vehicles />} />
 						<Route path="/vehicles/:vehicleId" element={<VehicleDetails />} />
 						<Route path="/single/:theid" element={<Single />} />
-						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route path="*" element={<PageNotFound/>} />
 					</Routes>
 					<Footer />
 				</ScrollToTop>

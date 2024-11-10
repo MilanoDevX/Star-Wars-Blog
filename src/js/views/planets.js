@@ -11,7 +11,7 @@ export const Planets = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     useEffect(() => {
         actions.getPlanets()
@@ -25,13 +25,15 @@ export const Planets = () => {
                 <h2 className="text-light"><i className="fa-solid fa-earth-asia" /> Planets</h2>
             </div>
             <div id="scroll" className="d-flex justify-content-center flex-wrap w-100 gap-5 mb-5">
-                    {
-                        store.planets.map((item, index) => {
-                            return (
-                                <CardPlanets key={index} name={item.name} uid={item.uid}></CardPlanets>
-                            )
-                        })
-                    }
+                {
+                    store.planets.length == 0 ? (
+                        <h2 className="text-light">Loading...</h2>
+                    ) : (
+                        store.planets.map((item, index) => (
+                            <CardPlanets key={index} name={item.name} uid={item.uid}></CardPlanets>
+                        ))
+                    )
+                }
             </div>
         </div>
 

@@ -11,29 +11,31 @@ export const Films = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     useEffect(() => {
-        actions.getFilms()
-    }, [])
+        actions.getFilms();
+    }, []);
 
     return (
         <div className="text-center mt-3">
-            <h1 id="databank1" className="text-light py-5" >Star Wars Databank</h1>
+            <h1 id="databank1" className="text-light py-5">Star Wars Databank</h1>
 
-            <div className="container-fluid d-flex mb-2" >
+            <div className="container-fluid d-flex mb-2">
                 <h2 className="text-light"><i className="fa-solid fa-jedi" /> Films</h2>
             </div>
-            <div id="scroll" className="d-flex justify-content-center flex-wrap gap-5 mb-5 mx-auto" style={{width:"60%"}}>
-                    {
-                        store.films.map((item, index) => {
-                            return (
-                                <CardFilms key={index} name={item.properties.title} uid={item.uid}></CardFilms>
-                            )
-                        })
-                    }
+            
+            <div id="scroll" className="d-flex justify-content-center flex-wrap gap-5 mb-5 mx-auto" style={{ width: "60%" }}>
+                {
+                    store.films.length == 0 ? (
+                        <h2 className="text-light">Loading...</h2> 
+                    ) : (
+                        store.films.map((item, index) => (
+                            <CardFilms key={index} name={item.properties.title} uid={item.uid}></CardFilms>
+                        ))
+                    )
+                }
             </div>
         </div>
-
-    )
-}
+    );
+};

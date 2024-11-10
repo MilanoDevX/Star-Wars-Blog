@@ -11,7 +11,7 @@ export const Characters = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     useEffect(() => {
         actions.getCharacters()
@@ -25,13 +25,15 @@ export const Characters = () => {
                 <h2 className="text-light"><i className="fa-solid fa-jedi" /> Characters</h2>
             </div>
             <div id="scroll" className="d-flex justify-content-center flex-wrap w-100 gap-5 mb-5">
-                    {
-                        store.characters.map((item, index) => {
-                            return (
-                                <CardCharacters key={index} name={item.name} uid={item.uid}></CardCharacters>
-                            )
-                        })
-                    }
+                {
+                    store.characters.length == 0 ? (
+                        <h2 className="text-light">Loading...</h2>
+                    ) : (
+                        store.characters.map((item, index) => (
+                            <CardCharacters key={index} name={item.name} uid={item.uid}></CardCharacters>
+                        ))
+                    )
+                }
             </div>
         </div>
 
