@@ -22,12 +22,12 @@ export const Navbar = () => {
 					<button type="button" className="btn btn-outline-warning px-4 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
 						Favorites
 					</button>
-					<ul className="dropdown-menu dropdown-menu-lg-end bg-warning">
+					<ul className="dropdown-menu dropdown-menu-lg-end bg-warning" style={{width: "max-content"}}>
 						{
 							store.favorites.map((item, index) => <li className="px-3" key={index}>
 								<div className="d-flex justify-content-between align-items-center">
 									<a className="droppdown-item text-black" href="#" style={{ textDecoration: "none" }}>{item.name}</a> 
-									<i className="fa-solid fa-x"
+									<i className="fa-solid fa-x mx-2"
 										style={{ cursor: "pointer" }}
 										onClick={() => actions.removeFavorite(item.name)}
 									></i>

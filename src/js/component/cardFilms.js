@@ -38,7 +38,7 @@ const CardFilms = (props) => {
                             }/>
                     </button>
                 </div>
-
+                
             </div>
     )
 }
