@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/demo.css";
+import Spinner from "../component/spinner";
 
 export const VehicleDetails = () => {
     const { store, actions } = useContext(Context);
@@ -104,7 +105,7 @@ export const VehicleDetails = () => {
                     </div>
                 </div>
             ) : (
-                <h2 className="text-light">Loading vehicle...</h2>
+                <Spinner />
             )}
         </div>
     );
