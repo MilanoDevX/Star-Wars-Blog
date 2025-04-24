@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/demo.css";
+import Spinner from "../component/spinner";
 
 export const StarshipDetails = () => {
     const { store, actions } = useContext(Context);
@@ -117,7 +118,7 @@ export const StarshipDetails = () => {
                     </div>
                 </div>
             ) : (
-                <h2 className="text-light">Loading starship...</h2>
+                <Spinner />
             )}
         </div>
     );

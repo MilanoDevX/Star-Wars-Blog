@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import CardFilms from "../component/cardFilms";
 import { Link } from "react-router-dom";
+import Spinner from "../component/spinner";
 
 import { Context } from "../store/appContext";
 
@@ -28,7 +29,7 @@ export const Films = () => {
             <div id="scroll" className="d-flex justify-content-center flex-wrap gap-5 mb-5 mx-auto" style={{ width: "60%" }}>
                 {
                     store.films.length == 0 ? (
-                        <h2 className="text-light">Loading...</h2> 
+                        <Spinner />
                     ) : (
                         store.films.map((item, index) => (
                             <CardFilms key={index} name={item.properties.title} uid={item.uid}></CardFilms>

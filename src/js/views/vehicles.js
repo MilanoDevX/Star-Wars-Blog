@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import CardVehicles from "../component/cardVehicles";
 import { Link } from "react-router-dom";
+import Spinner from "../component/spinner";
 
 import { Context } from "../store/appContext";
 
@@ -27,7 +28,7 @@ export const Vehicles = () => {
             <div id="scroll" className="d-flex justify-content-center flex-wrap w-100 gap-5 mb-5">
                 {
                     store.vehicles.length == 0 ? (
-                        <h2 className="text-light">Loading...</h2>
+                        <Spinner />
                     ) : (
                         store.vehicles.map((item, index) => (
                             <CardVehicles key={index} name={item.name} uid={item.uid}></CardVehicles>
