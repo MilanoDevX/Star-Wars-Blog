@@ -8,7 +8,7 @@ export const CharacterDetails = () => {
     const { store, actions } = useContext(Context);
     const { characterId } = useParams();
     const [character, setCharacter] = useState(null);
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     // Loading character details
     const loadCharacterDetails = async () => {
@@ -44,7 +44,7 @@ export const CharacterDetails = () => {
 
             <div className="d-flex justify-content-center my-0 w-50">
                 <button
-                    className="btn btn-outline-light mb-0" style={{border:"none"}}
+                    className="btn btn-outline-light mb-0" style={{ border: "none" }}
                     onClick={() => navigate(-1)} // back to the previous page
                 >
                     <i className="fa-solid fa-arrow-left fa-2xl"></i>
@@ -57,11 +57,12 @@ export const CharacterDetails = () => {
                         <div className="row d-flex justify-content-between">
                             <div className="col-md-7 px-0">
                                 <img
-                                    src={`https://starwars-visualguide.com/assets/img/characters/${characterId}.jpg`}
+                                    src={store.characterImages[characterId] || `https://starwars-visualguide.com/assets/img/characters/${characterId}.jpg`}
                                     className="card-img-top"
                                     alt={character.properties.name}
                                     style={{ width: "100%" }}
                                 />
+
                             </div>
                             <div className="col-md-5">
                                 <div className="card-body mb-5">

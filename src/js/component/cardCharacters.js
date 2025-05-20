@@ -20,10 +20,17 @@ const CardCharacters = (props) => {
         <div className="card p-0 rounded bg-dark text-white" style={{ width: "15rem", borderColor: color, borderWidth: "3px" }}>
             <Link to={`/characters/${props.uid}`}>
                 <img
-                    src={`https://starwars-visualguide.com/assets/img/characters/${props.uid}.jpg`}
+                    src={store.characterImages[props.uid] || `https://starwars-visualguide.com/assets/img/characters/${props.uid}.jpg`}
                     className="card-img-top"
                     alt={props.name}
-                    style={{ cursor: "pointer" }}
+                    style={{
+                        cursor: "pointer",
+                        height: "300px",
+                        width: "100%",
+                        objectFit: "cover",
+                        objectPosition: "top",
+                        display: "block"
+                    }}
                 />
             </Link>
             <div className="card-body">

@@ -1,3 +1,14 @@
+import character1 from "../../img/characters/characters-01-LukeTLJ.webp";
+import character2 from "../../img/characters/characters-02-C-3PO_TLJ_Card_Trader_Award_Card.webp";
+import character3 from "../../img/characters/characters-03-ArtooTFA2-Fathead.webp";
+import character4 from "../../img/characters/characters-04-Darth_Vader.webp";
+import character5 from "../../img/characters/characters-05-Leia_Organa_TLJ.webp";
+import character6 from "../../img/characters/characters-06-OwenCardTrader.webp";
+import character7 from "../../img/characters/characters-07-BeruCardTrader.webp";
+import character8 from "../../img/characters/characters-08-R5-D4_Sideshow.webp";
+import character9 from "../../img/characters/characters-09-BiggsHS-ANH.webp";
+import character10 from "../../img/characters/characters-10-ObiWanHS-SWE.webp";
+
 const getState = ({ getStore, getActions, setStore }) => {
     return {
         store: {
@@ -19,6 +30,18 @@ const getState = ({ getStore, getActions, setStore }) => {
             starships: [],
             vehicles: [],
             favorites: [],
+            characterImages: {
+                1: character1,
+                2: character2,
+                3: character3,
+                4: character4,
+                5: character5,
+                6: character6,
+                7: character7,
+                8: character8,
+                9: character9,
+                10: character10
+            },
         },
         actions: {
             // Use getActions to call a function within a function
