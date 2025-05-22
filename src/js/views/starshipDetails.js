@@ -30,9 +30,9 @@ export const StarshipDetails = () => {
     };
 
     // replacing the missed images
-    const url = (starshipId) == 2 ? ("https://m.gadzetomania.pl/cc-3f5e9be6cec2aa45edf491d723c12,750,470,0,0.jpg") :
+    const url = // (starshipId) == 2 ? ("https://m.gadzetomania.pl/cc-3f5e9be6cec2aa45edf491d723c12,750,470,0,0.jpg") :
     
-        (starshipId) == 3 ? ("https://i.pinimg.com/originals/f4/d9/7a/f4d97afd77c37ead846e8e8c9dc58bd3.jpg") :
+//      (starshipId) == 3 ? ("https://i.pinimg.com/originals/f4/d9/7a/f4d97afd77c37ead846e8e8c9dc58bd3.jpg") :
 
         (starshipId) == 17 ? ("https://th.bing.com/th/id/OIP.JcvxWswPAc1_N8lwZSwnYAHaFL?rs=1&pid=ImgDetMain") :
 
@@ -65,11 +65,17 @@ export const StarshipDetails = () => {
                             <div className="col-md-7 px-0 d-flex align-items-center">
                                 <div className="h-75">
                                     <img
+                                    src={store.starshipImages[starshipId] || `https://starwars-visualguide.com/assets/img/starships/${starshipId}.jpg`}
+                                    className="card-img-top"
+                                    alt={starship.properties.name}
+                                    style={{ width: "100%" }}
+                                />
+                                    {/* <img
                                         src={url}
                                         className="card-img-top"
                                         alt={starship.properties.name}
                                         style={{ width: "100%" }}
-                                    />
+                                    /> */}
                                 </div>
                             </div>
                             <div className="col-md-5">

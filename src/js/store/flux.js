@@ -8,6 +8,12 @@ import character7 from "../../img/characters/characters-07-BeruCardTrader.webp";
 import character8 from "../../img/characters/characters-08-R5-D4_Sideshow.webp";
 import character9 from "../../img/characters/characters-09-BiggsHS-ANH.webp";
 import character10 from "../../img/characters/characters-10-ObiWanHS-SWE.webp";
+import starship2 from "../../img/starships/starship-01-CR90-Corvette.webp";
+import starship3 from "../../img/starships/starship-02-Star-Destroyer.webp";
+import starship5 from "../../img/starships/starship-03-SentinelClassLandingCraft.webp";
+import starship9 from "../../img/starships/starship-04-DeathStar1.webp";
+import starship11 from "../../img/starships/starship-05-Ywing.webp";
+
 
 const getState = ({ getStore, getActions, setStore }) => {
     return {
@@ -42,6 +48,20 @@ const getState = ({ getStore, getActions, setStore }) => {
                 9: character9,
                 10: character10
             },
+            starshipImages: {
+                1: "",
+                2: starship2,
+                3: starship3,
+                4: "",
+                5: starship5,
+                6: "",
+                7: "",
+                8: "",
+                9: starship9,
+                10: "",
+                11: starship11,
+            },
+
         },
         actions: {
             // Use getActions to call a function within a function
