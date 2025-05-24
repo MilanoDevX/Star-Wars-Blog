@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html class="h-100">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>Hello Rigo with Vanilla.js</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>StarWars Databank</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
 
-    </head>
-    <body class="h-100">
-        <audio id="myAudio" src="https://www.televisiontunes.com/uploads/audio/Star%20Wars%20-%20Main%20Theme.mp3" type="audio/mp3"></audio>
-        <script>
-          // Reproduce el audio automáticamente cuando la página carga
-          window.onload = function() {
-            const audio = document.getElementById("myAudio");
-            audio.play();
-          };
-        </script>
-      
-        <div id="app" class="h-100"></div>
-        <!-- Many of bootstrap components require the use of JavaScript to function -->
-        <!-- Popper and BootStrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/8042bf0974.js" crossorigin="anonymous"></script>
-    </body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body class="h-100">
+
+  <audio id="myAudio"
+    src="https://ia803204.us.archive.org/16/items/StarWarsThemeSongByJohnWilliams/Star%20Wars%20Theme%20Song%20By%20John%20Williams.mp3"
+    type="audio/mp3">
+  </audio>
+
+  <!-- <button class="btn btn-warning ms-4 mt-5" onclick="document.getElementById('myAudio').play()">
+    ▶ Play music
+  </button> -->
+
+  <!-- <script>
+    // Reproduce el audio automáticamente cuando la página carga
+    window.onload = function () {
+      const audio = document.getElementById("myAudio");
+      audio.play();
+    };
+  </script> -->
+
+  <script>
+    const audio = document.getElementById('myAudio');
+
+    document.addEventListener('click', () => {
+      audio.play();
+    }, { once: true });
+  </script>
+
+
+  <div id="app" class="h-100"></div>
+  <!-- Many of bootstrap components require the use of JavaScript to function -->
+  <!-- Popper and BootStrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8042bf0974.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

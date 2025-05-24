@@ -27,7 +27,7 @@ export const Home = () => {
 		<div className="text-center mt-3">
 			<Hero></Hero>
 
-			<h1 id="databank" className="text-light pt-5 pb-0" >Star Wars Databank</h1>
+			<h1 id="databank1" className="text-light pt-5 pb-0" >Star Wars Databank</h1>
 
 			<div className="container d-flex justify-content-center mb-1 gap-5" >
 				<Link to={{ pathname: "/films" }} style={{ textDecoration: "none" }}>
@@ -49,7 +49,8 @@ export const Home = () => {
 				<Link to={{ pathname: "/vehicles" }} style={{ textDecoration: "none" }}>
 					<h4 className="text-light">Vehicles</h4>
 				</Link>
-			</div>			<div className="d-flex justify-content-center">
+			</div>			
+			<div className="d-flex justify-content-center">
 				<img
 					src={episodeImage}
 					alt="Star Wars Episode 3"

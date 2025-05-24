@@ -22,7 +22,7 @@ export const Hero = () => {
         className="d-block mx-auto mb-4"
         src={logoImage}
         alt="Star Wars Logo"
-        style={{ width: "95%"}}
+        style={{ width: "100%", height: "95%" }}
       />
       <div className="col-lg-6 mx-auto">
       </div>
