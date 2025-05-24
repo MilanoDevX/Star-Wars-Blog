@@ -53,7 +53,7 @@ export const FilmDetails = () => {
                         <div className="row d-flex justify-content-between">
                             <div className="col-md-7 px-0">
                                 <img
-                                    src={`https://starwars-visualguide.com/assets/img/films/${filmId}.jpg`}
+                                    src={store.filmImages[filmId] || `https://starwars-visualguide.com/assets/img/films/${filmId}.jpg`}
                                     className="card-img-top"
                                     alt={film.properties.title}
                                     style={{ width: "60%" }}

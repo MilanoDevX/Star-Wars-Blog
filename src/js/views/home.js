@@ -24,7 +24,7 @@ export const Home = () => {
 
 
 	return (
-		<div className="text-center mt-3">
+		<div className="text-center mt-3 mb-0">
 			<Hero></Hero>
 
 			<h1 id="databank1" className="text-light pt-5 pb-0" >Star Wars Databank</h1>
@@ -54,7 +54,7 @@ export const Home = () => {
 				<img
 					src={episodeImage}
 					alt="Star Wars Episode 3"
-					style={{ width: "70%" }}
+					style={{ width: "65%" }}
 				/>
 			</div>
 

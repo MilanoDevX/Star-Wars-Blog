@@ -20,7 +20,7 @@ const CardFilms = (props) => {
     return (
         <div className="card p-0 rounded bg-dark text-white" style={{ width: "15rem", borderColor: `${color}`, borderWidth: "3px" }}>
             <Link to={`/films/${props.uid}`}>
-                <img src={"https://starwars-visualguide.com/assets/img/films/" + props.uid + ".jpg"}
+                <img src={store.filmImages[props.uid] || `https://starwars-visualguide.com/assets/img/films/${props.uid}.jpg`}
                     className="card-img-top" alt={props.name}
                 />
             </Link>

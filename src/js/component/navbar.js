@@ -6,7 +6,7 @@ export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<nav className="navbar m-0 px-5 py-2 fixed-top">
+		<nav className="navbar bg-black m-0 px-5 py-2 fixed-top">
 			<Link to={{ pathname: "/", hash: "#hero" }} style={{ textDecoration: "none" }}>
 				<div className="justify-content-center text-warning">
 					<img
