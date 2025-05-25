@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 const CardPlanets = (props) => {
-    const url = (props.uid) == 1 ? ("https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png") : ("https://starwars-visualguide.com/assets/img/planets/" + props.uid + ".jpg")
+    // const url = (props.uid) == 1 ? ("https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png") : ("https://starwars-visualguide.com/assets/img/planets/" + props.uid + ".jpg")
 
     const { store, actions } = useContext(Context);
 
@@ -21,10 +21,22 @@ const CardPlanets = (props) => {
     return (
         <div className="card p-0 rounded bg-dark text-white" style={{ width: "15rem", borderColor: `${color}`, borderWidth: "3px" }}>
             <Link to={`/planets/${props.uid}`}>
-                <img src={url}
+                {/* <img src={url}
                     className="card-img-top"
                     alt={props.name}
                     style={{ cursor: "pointer" }}
+                /> */}
+                <img src={store.planetImages[props.uid]}
+                    className="card-img-top"
+                    alt={props.name}
+                    style={{
+                        cursor: "pointer",
+                        height: "250px",
+                        width: "100%",
+                        objectFit: "cover",
+                        objectPosition: "top",
+                        display: "block"
+                    }}
                 />
             </Link>
             <div className="card-body">

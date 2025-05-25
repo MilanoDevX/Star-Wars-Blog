@@ -29,7 +29,7 @@ export const PlanetDetails = () => {
         }
     };
 
-    const url = (planetId) == 1 ? ("https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png") : ("https://starwars-visualguide.com/assets/img/planets/" + planetId + ".jpg")
+    // const url = (planetId) == 1 ? ("https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png") : ("https://starwars-visualguide.com/assets/img/planets/" + planetId + ".jpg")
 
 
     useEffect(() => {
@@ -56,7 +56,7 @@ export const PlanetDetails = () => {
                         <div className="row d-flex justify-content-between">
                             <div className="col-md-7 px-0">
                                 <img
-                                    src={url}
+                                    src={store.planetImages[planetId]}
                                     className="card-img-top"
                                     alt={planet.properties.name}
                                     style={{ width: "100%" }}
