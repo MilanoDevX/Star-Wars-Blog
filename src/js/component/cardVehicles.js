@@ -20,9 +20,22 @@ const CardVehicles = (props) => {
     return (
         <div className="card p-0 rounded bg-dark text-white" style={{ width: "15rem", borderColor: `${color}`, borderWidth: "3px" }}>
             <Link to={`/vehicles/${props.uid}`}>
-                <img src={"https://starwars-visualguide.com/assets/img/vehicles/" + props.uid + ".jpg"}
+                {/* <img src={`https://starwars-visualguide.com/assets/img/vehicles/${props.uid}.jpg`}
                     className="card-img-top" alt={props.name}
+                /> */}
+                <img src={store.vehicleImages[props.uid] || `https://starwars-visualguide.com/assets/img/vehicles/${props.uid}.jpg`}
+                    className="card-img-top"
+                    alt={props.name}
+                    style={{
+                        cursor: "pointer",
+                        height: "250px",
+                        width: "100%",
+                        objectFit: "cover",
+                        objectPosition: "top",
+                        display: "block"
+                    }}
                 />
+
             </Link>
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>

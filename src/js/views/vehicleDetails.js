@@ -50,15 +50,21 @@ export const VehicleDetails = () => {
 
             {vehicle ? (
                 <div className="container-fluid d-flex flex-column align-items-center mb-0">
-                    <div className="card container my-2 bg-black" style={{ width: "600px" }}>
+                    <div className="card container my-0 bg-black" style={{ width: "1000px" }}>
                         <div className="row d-flex justify-content-between">
-                            <div className="col-md-7 px-0 d-flex align-items-center">
+                            <div className="col-md-7 px-0 pt-4">
                                 <div className="h-75">
-                                    <img
+                                    {/* <img
                                         src={`https://starwars-visualguide.com/assets/img/vehicles/${vehicleId}.jpg`}
                                         className="card-img-top"
                                         alt={vehicle.properties.name}
                                         style={{ width: "100%" }}
+                                    /> */}
+                                    <img
+                                        src={store.vehicleImages[vehicleId] || `https://starwars-visualguide.com/assets/img/vehicles/${vehicleId}.jpg`}
+                                        className="card-img-top mb-3"
+                                        alt={vehicle.properties.name}
+                                        style={{ width: "200%", maxWidth: "500px" }}
                                     />
                                 </div>
                             </div>

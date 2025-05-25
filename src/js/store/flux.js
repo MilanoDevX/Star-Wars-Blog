@@ -128,6 +128,28 @@ const getState = ({ getStore, getActions, setStore }) => {
                 47: "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg",
                 48: "https://lumiere-a.akamaihd.net/v1/images/delta-7-starfighter_fe9a59bc.jpeg"
             },
+            vehicleImages: {
+                4: "https://static.wikia.nocookie.net/starwars/images/f/ff/Sandcrawler.png",
+                6: "https://www.starwars-holonet.com/holonet/dictionnaire/photos/ship_t16.jpg",
+                7: "https://www.starwars-holonet.com/holonet/dictionnaire/photos/ship_x34.jpg",
+                8: "https://cdnb.artstation.com/p/assets/images/images/002/479/549/large/bruno-parillo-screenshot089.jpg",
+                14: "https://www.manualidadestrasgu.com/WebRoot/StoreES2/Shops/ec1273/6473/AD39/C1E6/1D72/806F/52DF/D016/BCDF/revell_03604_caja.jpg",
+                16: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSfF-gh1Vub6uuX2vFuHnz6u0jZ3HCxi0riw&s",
+                18: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1PlyXjdUF3fUuWFNyNBrHJL2nqCEm9EgNSA&s", 
+                19: "https://lumiere-a.akamaihd.net/v1/images/e6d_ia_5724_a150e6d4.jpeg?region=124%2C0%2C1424%2C802",
+                20: "https://i.pinimg.com/736x/62/e0/0d/62e00d1f888409ac4582f93389444042.jpg",
+                24: "https://static.wikia.nocookie.net/starwars/images/d/d4/Sailbarge-chron2.jpg",
+                25: "https://lumiere-a.akamaihd.net/v1/images/skiff_9d81647a.jpeg",
+                26: "https://lumiere-a.akamaihd.net/v1/images/tie-interceptor-2_b2250e79.jpeg",
+                30: "https://lumiere-a.akamaihd.net/v1/images/74zbikehistory-2-retina_6fff502e.jpeg?region=0%2C0%2C1200%2C514",
+                33: "https://lumiere-a.akamaihd.net/v1/images/databank_vulturedroid_01_169_6ef9fd50.jpeg?region=0%2C0%2C1560%2C878",
+                34: "https://lumiere-a.akamaihd.net/v1/images/databank_mtt_01_169_efb8a98a.jpeg?region=0%2C0%2C1560%2C878",
+                35: "https://lumiere-a.akamaihd.net/v1/images/databank_aatbattletank_01_169_9de46aea.jpeg",
+                36: "https://lumiere-a.akamaihd.net/v1/images/databank_stap_01_169_75029522.jpeg",
+                37: "https://i.imgur.com/lSkuQbN.jpeg",
+                38: "https://lumiere-a.akamaihd.net/v1/images/databank_gunganbongosubmarine_01_169_fc9286be.jpeg",
+                42: "https://www.kametoys.cl/wp-content/uploads/2019/01/star-wars-darth-maul-with-sith-speeder-sixth-scale-figure-hot-toys-feature-903737.jpg"
+            }
 
         },
         actions: {
