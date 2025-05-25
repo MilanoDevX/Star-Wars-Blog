@@ -1,9 +1,3 @@
-import starship2 from "../../img/starships/starship-02-CR90-Corvette.webp";
-import starship3 from "../../img/starships/starship-03-Star-Destroyer.webp";
-import starship5 from "../../img/starships/starship-05-SentinelClassLandingCraft.webp";
-import starship9 from "../../img/starships/starship-09-DeathStar1.webp";
-import starship11 from "../../img/starships/starship-11-Ywing.webp";
-
 
 const getState = ({ getStore, getActions, setStore }) => {
     return {
@@ -88,17 +82,30 @@ const getState = ({ getStore, getActions, setStore }) => {
                 51: "https://static.wikia.nocookie.net/starwars/images/2/27/MaceWindu_-WoSW.png",
             },
             starshipImages: {
-                1: "",
-                2: starship2,
-                3: starship3,
-                4: "",
-                5: starship5,
-                6: "",
-                7: "",
-                8: "",
-                9: starship9,
-                10: "",
-                11: starship11,
+                2: "https://m.gadzetomania.pl/cc-3f5e9be6cec2aa45edf491d723c12,750,470,0,0.jpg",
+                3: "https://i.pinimg.com/originals/f4/d9/7a/f4d97afd77c37ead846e8e8c9dc58bd3.jpg",
+                5: "https://cdna.artstation.com/p/marketplace/presentation_assets/001/723/266/large/file.jpg",
+                9: "https://lumiere-a.akamaihd.net/v1/images/Death-Star-I-copy_36ad2500.jpeg",
+                10: "https://golfdigest.sports.sndimg.com/content/dam/images/golfdigest/fullset/2018/04/16/5ad4e8c370e68e282f66ed87_falcon.png",
+                11: "https://lumiere-a.akamaihd.net/v1/images/Y-Wing-Fighter_0e78c9ae.jpeg",
+                12: "http://d6holocron.com/wiki/images/5/53/Xwingstarfighter.jpg",
+                13: "https://cdnb.artstation.com/p/assets/images/images/028/086/799/4k/donny-versiga-sw-tie-advanced-01.jpg",
+                15: "https://swrpggm.com/wp-content/uploads/2020/12/SSDFE.png",
+                17: "http://pm1.aminoapps.com/6282/329621e82c6c85fbed51bb6ee117eca945d00d5a_00.jpg",
+                21: "https://images.cults3d.com/1ncaqRgqlqPzYne6jkqI8IpCB8g=/516x516/filters:no_upscale()/https://fbi.cults3d.com/uploaders/31765151/illustration-file/563ead8f-a321-4dde-bff6-8379d8997532/Slave_I.jpg",
+                22: "https://lumiere-a.akamaihd.net/v1/images/veh_ia_1752_040381b2.jpeg",
+                23: "https://i.namu.wiki/i/nJmdE4kIoL_kTvxApdA1uNG3dqt6ulmH2-GWeiG43_3L_8flzCmvpAmi1kALRShJ7zmwDZMjGp3Wd5DhLfDfmCO7blo0Ci-B2ROpLGo773qyXWlab667_SqNUx32NUH1t7vRoWZTbNYh-0G3O_mOs9r196Y0ONG8R8SxD-xTmEU.webp",
+                27: "https://rpggamer.org/uploaded_images/Profundity_SWA.png",
+                28: "https://lumiere-a.akamaihd.net/v1/images/screen_shot_2015-05-26_at_5_16a39e17.png",
+                29: "https://lumiere-a.akamaihd.net/v1/images/databank_bwingfighter_01_169_460cc528.jpeg",
+                31: "https://lumiere-a.akamaihd.net/v1/images/databank_republicattackcruiser_01_169_812f153d.jpeg",
+                32: "https://lumiere-a.akamaihd.net/v1/images/databank_tradefederationbattleship_01_169_fc5458ce.jpeg",
+                39: "https://lumiere-a.akamaihd.net/v1/images/databank_naboon1starfighter_01_169_26691adf.jpeg",
+                40: "https://lumiere-a.akamaihd.net/v1/images/databank_nabooroyalstarship_01_169_e61f677e.jpeg",
+                41: "https://cdnb.artstation.com/p/assets/images/images/062/787/171/large/quentin-vautrin-sith-destructor-maul.jpg",
+                43: "https://m.media-amazon.com/images/M/MV5BYjU4ZGNkNjMtYTBlZi00NDJhLTk2OGQtYjI5NGE2YWQxYjgyXkEyXkFqcGc@._V1_.jpg",
+                47: "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg",
+                48: "https://lumiere-a.akamaihd.net/v1/images/delta-7-starfighter_fe9a59bc.jpeg"
             },
 
         },

@@ -30,13 +30,13 @@ export const StarshipDetails = () => {
     };
 
     // replacing the missed images
-    const url = // (starshipId) == 2 ? ("https://m.gadzetomania.pl/cc-3f5e9be6cec2aa45edf491d723c12,750,470,0,0.jpg") :
+//    const url = (starshipId) == 2 ? ("https://m.gadzetomania.pl/cc-3f5e9be6cec2aa45edf491d723c12,750,470,0,0.jpg") :
     
 //      (starshipId) == 3 ? ("https://i.pinimg.com/originals/f4/d9/7a/f4d97afd77c37ead846e8e8c9dc58bd3.jpg") :
 
-        (starshipId) == 17 ? ("https://th.bing.com/th/id/OIP.JcvxWswPAc1_N8lwZSwnYAHaFL?rs=1&pid=ImgDetMain") :
+//        (starshipId) == 17 ? ("https://th.bing.com/th/id/OIP.JcvxWswPAc1_N8lwZSwnYAHaFL?rs=1&pid=ImgDetMain") :
 
-        (starshipId) == 32 ? ("https://i.pinimg.com/736x/9c/7a/02/9c7a02d817523f9d8461f03f61415efa--star-wars-tribute.jpg") : ("https://starwars-visualguide.com/assets/img/starships/" + starshipId + ".jpg")
+//        (starshipId) == 32 ? ("https://i.pinimg.com/736x/9c/7a/02/9c7a02d817523f9d8461f03f61415efa--star-wars-tribute.jpg") : ("https://starwars-visualguide.com/assets/img/starships/" + starshipId + ".jpg")
 
 
     useEffect(() => {
@@ -60,15 +60,15 @@ export const StarshipDetails = () => {
 
             {starship ? (
                 <div className="container-fluid d-flex flex-column align-items-center mb-0">
-                    <div className="card container my-2 bg-black" style={{ width: "600px" }}>
+                    <div className="card container my-0 bg-black" style={{ width: "1000px"}}>
                         <div className="row d-flex justify-content-between">
-                            <div className="col-md-7 px-0 d-flex align-items-center">
+                            <div className="col-md-7 px-0 pt-5">
                                 <div className="h-75">
                                     <img
                                     src={store.starshipImages[starshipId] || `https://starwars-visualguide.com/assets/img/starships/${starshipId}.jpg`}
-                                    className="card-img-top"
+                                    className="card-img-top my-auto"
                                     alt={starship.properties.name}
-                                    style={{ width: "100%" }}
+                                    style={{ width: "300%", maxWidth: "500px" }}
                                 />
                                     {/* <img
                                         src={url}

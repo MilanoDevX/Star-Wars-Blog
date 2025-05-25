@@ -16,7 +16,7 @@ export const Navbar = () => {
 				</div>
 			</Link>
 			<div className="ml-auto d-flex gap-2">
-				<Link to={{ pathname: "/", hash: "#footer" }}>
+				<Link to={{ pathname: "/", hash: "#databank" }}>
 					<button type="button" className="btn btn-outline-light px-4">Databank</button>
 				</Link>
 
