@@ -6,24 +6,16 @@ const CardStarships = (props) => {
 
     const { store, actions } = useContext(Context);
 
-    const url = // (props.uid) == 2 ? ("https://m.gadzetomania.pl/cc-3f5e9be6cec2aa45edf491d723c12,750,470,0,0.jpg") :
+//    const url = (props.uid) == 2 ? ("https://m.gadzetomania.pl/cc-3f5e9be6cec2aa45edf491d723c12,750,470,0,0.jpg") :
 
-    //     (props.uid) == 3 ? ("https://i.pinimg.com/originals/f4/d9/7a/f4d97afd77c37ead846e8e8c9dc58bd3.jpg") :
+//         (props.uid) == 3 ? ("https://i.pinimg.com/originals/f4/d9/7a/f4d97afd77c37ead846e8e8c9dc58bd3.jpg") :
 
-            (props.uid) == 17 ? ("https://th.bing.com/th/id/OIP.JcvxWswPAc1_N8lwZSwnYAHaFL?rs=1&pid=ImgDetMain") :
+//            (props.uid) == 17 ? ("https://th.bing.com/th/id/OIP.JcvxWswPAc1_N8lwZSwnYAHaFL?rs=1&pid=ImgDetMain") :
 
-                (props.uid) == 32 ? ("https://i.pinimg.com/736x/9c/7a/02/9c7a02d817523f9d8461f03f61415efa--star-wars-tribute.jpg") : ("https://starwars-visualguide.com/assets/img/starships/" + props.uid + ".jpg")
+//                (props.uid) == 32 ? ("https://i.pinimg.com/736x/9c/7a/02/9c7a02d817523f9d8461f03f61415efa--star-wars-tribute.jpg") : ("https://starwars-visualguide.com/assets/img/starships/" + props.uid + ".jpg")
 
-    let randomColor = () => {
-        const colorBase = "0123456789ABCDEF";
-        let newColor = "#";
 
-        for (let i = 0; i < 6; i++) {
-            newColor = newColor + colorBase[Math.floor(Math.random() * colorBase.length)];
-        }
-        return newColor;
-    }
-    const color = randomColor();
+    const color = actions.randomColor();
 
     return (
         <div className="card p-0 rounded bg-dark text-white" style={{ width: "15rem", borderColor: `${color}`, borderWidth: "3px" }}>

@@ -1,26 +1,27 @@
 import React, { useEffect, useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/navbar.css";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   const [interacted, setInteracted] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    // Handler para detectar interacción
-    const handleInteraction = () => setInteracted(true);
+    // Solo activar el efecto si estamos en la página de inicio
+    if (location.pathname === "/") {
+      const handleInteraction = () => setInteracted(true);
 
-    // Agregar listeners
-    window.addEventListener("scroll", handleInteraction);
-    window.addEventListener("click", handleInteraction);
+      window.addEventListener("scroll", handleInteraction);
+      window.addEventListener("click", handleInteraction);
 
-    // Limpiar listeners
-    return () => {
-      window.removeEventListener("scroll", handleInteraction);
-      window.removeEventListener("click", handleInteraction);
-    };
-  }, []);
+      return () => {
+        window.removeEventListener("scroll", handleInteraction);
+        window.removeEventListener("click", handleInteraction);
+      };
+    }
+  }, [location.pathname]);
 
   return (
     <nav className="navbar bg-black m-0 px-5 py-2 fixed-top">
@@ -29,6 +30,7 @@ export const Navbar = () => {
           <img
             src="https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png"
             style={{ maxWidth: "100px" }}
+            alt="Star Wars Logo"
           />
         </div>
       </Link>
@@ -37,7 +39,9 @@ export const Navbar = () => {
         <Link to={{ pathname: "/", hash: "#databank" }}>
           <button
             type="button"
-            className={`btn btn-outline-light px-4 ${!interacted ? "blinking" : ""}`}
+            className={`btn btn-outline-light px-4 ${
+              location.pathname === "/" && !interacted ? "blinking" : ""
+            }`}
           >
             Databank
           </button>
@@ -59,7 +63,7 @@ export const Navbar = () => {
                 <li className="px-3" key={index}>
                   <div className="d-flex justify-content-between align-items-center">
                     <a
-                      className="dropdown-item bg-warning  text-black"
+                      className="dropdown-item bg-warning text-black"
                       href="#"
                       style={{ textDecoration: "none" }}
                     >

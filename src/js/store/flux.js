@@ -98,7 +98,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                 14: "https://static.wikia.nocookie.net/esstarwars/images/d/d0/Kashyyyk_FFGRebellion.png",
                 15: "https://static.wikia.nocookie.net/esstarwars/images/2/22/PolisMassaNEGAS.jpg",
                 16: "https://static.wikia.nocookie.net/esstarwars/images/7/76/Mygeeto_TEA.jpg",
-                17: "https://static.wikia.nocookie.net/esstarwars/images/a/a2/Felucia_SWCT.png", 
+                17: "https://static.wikia.nocookie.net/esstarwars/images/a/a2/Felucia_SWCT.png",
                 18: "https://static.wikia.nocookie.net/esstarwars/images/c/c7/Cato_Neimoidia_CotG.png",
                 19: "https://static.wikia.nocookie.net/ptstarwars/images/7/75/Saleucami.jpg"
             },
@@ -135,7 +135,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                 8: "https://cdnb.artstation.com/p/assets/images/images/002/479/549/large/bruno-parillo-screenshot089.jpg",
                 14: "https://www.manualidadestrasgu.com/WebRoot/StoreES2/Shops/ec1273/6473/AD39/C1E6/1D72/806F/52DF/D016/BCDF/revell_03604_caja.jpg",
                 16: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSfF-gh1Vub6uuX2vFuHnz6u0jZ3HCxi0riw&s",
-                18: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1PlyXjdUF3fUuWFNyNBrHJL2nqCEm9EgNSA&s", 
+                18: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1PlyXjdUF3fUuWFNyNBrHJL2nqCEm9EgNSA&s",
                 19: "https://lumiere-a.akamaihd.net/v1/images/e6d_ia_5724_a150e6d4.jpeg?region=124%2C0%2C1424%2C802",
                 20: "https://i.pinimg.com/736x/62/e0/0d/62e00d1f888409ac4582f93389444042.jpg",
                 24: "https://static.wikia.nocookie.net/starwars/images/d/d4/Sailbarge-chron2.jpg",
@@ -252,6 +252,16 @@ const getState = ({ getStore, getActions, setStore }) => {
                 const store = getStore();
                 const updatedFavorites = store.favorites.filter(fav => fav.name !== item);
                 setStore({ favorites: updatedFavorites });
+            },
+
+            //generate random color for border of cards
+            randomColor: () => {
+                const colorBase = "0123456789ABCDEF";
+                let newColor = "#";
+                for (let i = 0; i < 6; i++) {
+                    newColor += colorBase[Math.floor(Math.random() * colorBase.length)];
+                }
+                return newColor;
             }
         }
     };
