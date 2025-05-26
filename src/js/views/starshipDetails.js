@@ -48,7 +48,7 @@ export const StarshipDetails = () => {
         <div className="text-center bg-black mt-2">
             <h1 id="databank1" className="text-light pt-5 pb-3">Star Wars Databank</h1>
 
-            <div className="d-flex justify-content-center my-0 w-50">
+            <div className="d-flex justify-content-center my-0 w-25">
                 <button
                     className="btn btn-outline-light mb-0"
                     style={{ border: "none" }}

@@ -109,7 +109,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                 9: "https://lumiere-a.akamaihd.net/v1/images/Death-Star-I-copy_36ad2500.jpeg",
                 10: "https://golfdigest.sports.sndimg.com/content/dam/images/golfdigest/fullset/2018/04/16/5ad4e8c370e68e282f66ed87_falcon.png",
                 11: "https://lumiere-a.akamaihd.net/v1/images/Y-Wing-Fighter_0e78c9ae.jpeg",
-                12: "http://d6holocron.com/wiki/images/5/53/Xwingstarfighter.jpg",
+                12: "https://lumiere-a.akamaihd.net/v1/images/X-Wing-Fighter_47c7c342.jpeg",
                 13: "https://cdnb.artstation.com/p/assets/images/images/028/086/799/4k/donny-versiga-sw-tie-advanced-01.jpg",
                 15: "https://swrpggm.com/wp-content/uploads/2020/12/SSDFE.png",
                 17: "http://pm1.aminoapps.com/6282/329621e82c6c85fbed51bb6ee117eca945d00d5a_00.jpg",
@@ -131,7 +131,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             vehicleImages: {
                 4: "https://static.wikia.nocookie.net/starwars/images/f/ff/Sandcrawler.png",
                 6: "https://www.starwars-holonet.com/holonet/dictionnaire/photos/ship_t16.jpg",
-                7: "https://www.starwars-holonet.com/holonet/dictionnaire/photos/ship_x34.jpg",
+                7: "https://lumiere-a.akamaihd.net/v1/images/E4D_IA_1136_6b8704fa.jpeg",
                 8: "https://cdnb.artstation.com/p/assets/images/images/002/479/549/large/bruno-parillo-screenshot089.jpg",
                 14: "https://www.manualidadestrasgu.com/WebRoot/StoreES2/Shops/ec1273/6473/AD39/C1E6/1D72/806F/52DF/D016/BCDF/revell_03604_caja.jpg",
                 16: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSfF-gh1Vub6uuX2vFuHnz6u0jZ3HCxi0riw&s",

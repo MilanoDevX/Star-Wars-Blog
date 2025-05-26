@@ -9,7 +9,6 @@ export const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Solo activar el efecto si estamos en la página de inicio
     if (location.pathname === "/") {
       const handleInteraction = () => setInteracted(true);
 
